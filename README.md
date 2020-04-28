@@ -1,15 +1,14 @@
 
 # **AWS**  
 
-```
-**-   What is Clund ?**
-**-   What is AWS ?**
-**-   Different Domains in AWS**
-**-   AWS Services**
-**-   AWS Pricing Options**
-**-   Migrating your application to AWS Infrastructure**
+**-   What is Clund ?**    
+**-   What is AWS ?**       
+**-   Different Domains in AWS**        
+**-   AWS Services**    
+**-   AWS Pricing Options**     
+**-   Migrating your application to AWS Infrastructure**        
 **-   Architecting the Use Case**
-```
+
 #
 
 1.  **Cloud computing** : is the use of remote servers to store, manage and process data. So, you do three things, you store, you manage, and you process data.
