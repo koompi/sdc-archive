@@ -42,7 +42,7 @@ https://aws.amazon.com/premiumsupport/knowledge-center/ses-receive-inbound-email
 		    ]
 		}
 	- Edit lambda Function in **index.js**
-		```
+		```console
 		
 		var LambdaForwarder = require("aws-lambda-ses-forwarder");
 
