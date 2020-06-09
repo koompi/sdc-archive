@@ -1,0 +1,10 @@
+[Unit]
+Description=script description %I
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fixsmb
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#create directory
+mkdir -p /run/samba
+
+#restart service
+systemctl restart smb.service

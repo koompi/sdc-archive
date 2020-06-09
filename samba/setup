@@ -1,0 +1,112 @@
+#!/bin/bash
+clear
+
+wget -q --tries=10 --timeout=20 --spider http://google.com
+if [[ $? -eq 0 ]]; then
+        echo "Online"
+else
+        echo "Offline"
+        echo "Please check your connection."
+        exit 0;
+fi
+
+#color
+RED='\033[0;31m'
+YELLOW='\033[0;93m'
+BULE='\033[0;94m'
+MAGENTA='\033[0;35m'
+NC='\033[0m'
+
+if [[ $(id -u) == 0 ]];then
+    echo -e "$RED Please run as user normal.$NC"
+    echo "./setup.sh"
+    exit 0;
+fi
+#check package install
+if pacman -Qs samba > /dev/null ; then
+  echo "The package $line is installed"
+else
+  sudo pacman -Sy samba wget --noconfirm
+fi
+
+IPADDRESS=$(ip r | awk -F' ' 'NR==2 {print $9}')
+#Share home directory
+function home(){
+cat <<EOF | sudo tee -a /etc/samba/smb.conf
+[homes]
+   comment = Home Directories
+   browseable = no
+   read only = no
+   guest ok = no
+   valid users = %S
+EOF
+}
+
+#Share directory
+function share(){
+cat <<EOF | sudo tee -a /etc/samba/smb.conf
+[share]
+   comment = Share directory
+   path = /home/%U/share
+   read only = no
+   guest only = no
+   guest ok = no
+   share modes = yes
+EOF
+}
+
+function service(){
+    sudo systemctl enable smb.service
+    sudo systemctl restart smb.service
+    sudo systemctl status smb.service
+}
+
+function listuser(){
+    echo
+    echo "Add user to samba"
+    echo "User available now:"
+    echo -e "$MAGENTA$(id -u -n)$NC"
+}
+
+function samba(){
+echo ""
+echo "1. Home directory"
+echo "2. Share directory"
+read -p "Choose Type Share[1,2]: " CHOOSE
+
+if [[ $CHOOSE == 1 ]];then
+    echo "You chose Home directory"
+    sudo cp ./smb.conf /etc/samba/
+    home > /dev/null
+    service
+    listuser
+    sudo pdbedit -a $(id -u -n) 
+    echo
+    echo -e "Your path in local: $BULE$HOME$NC"
+    echo -e "Share Path on window:$BULE //$IPADDRESS/$(id -u -n)$NC"
+    echo -e "Share Path on Linux:$BULE smb://$IPADDRESS/$(id -u -n)$NC"
+
+elif [[ $CHOOSE == 2 ]];then
+    echo "You chose Share directory"
+    sudo cp ./smb.conf /etc/samba/
+    share > /dev/null
+    service
+    listuser
+    sudo smbpasswd -a $(id -u -n)
+    echo
+    echo -e "Your path in local: $BULE$HOME/share$NC"
+    echo -e "Share Path on window:$BULE /$IPADDRESS/share$NC"
+    echo -e "Share Path on linux:$BULE smb://$IPADDRESS/share$NC"
+    mkdir -p $HOME/share
+
+else
+    samba
+fi
+}
+samba
+
+#fix samba
+sudo cp -r fixsmb /usr/bin/
+sudo cp -r fixsmb.service /lib/systemd/system/
+sudo systemctl enable fixsmb
+sudo systemctl start fixsmb
