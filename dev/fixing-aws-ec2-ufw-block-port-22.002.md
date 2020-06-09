@@ -1,3 +1,12 @@
+```
+DEV: 002
+Title: How to fix Amazon EC2 instance when you accidentally block port 22
+Author: Saing Sab
+Status: Active
+Create: 2020-04-29
+Update: NA
+version: 0.1.0
+```
 ### How to fix Amazon EC2 instance when you accidentally block port 22
 
 ### Scenario: 

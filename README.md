@@ -12,8 +12,8 @@ Public Documentation
  Will above the foundation, Configure cloud computing, service etc.
 
  * DEV001 [AWS Cloud and Service](/dev/aws_learning001.md)
- * DEV002 [Fix aws EC2 ufw block port 22](dev/fixing-aws-ec2-ufw-block-port-22.002.md)
- * DEV003 [AWS forward mail](/dev/aws-forward-mail003.md)
+ * DEV002 [How to fix Amazon EC2 instance when you accidentally block port 22](dev/fixing-aws-ec2-ufw-block-port-22.002.md)
+ * DEV003 [AWS Emails Forwarding ](/dev/aws-forward-mail003.md)
 
  # Cybersecurity
 

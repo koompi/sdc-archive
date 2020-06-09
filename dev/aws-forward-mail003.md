@@ -1,4 +1,13 @@
-# Forwarding Emails
+```
+DEV: 003
+Title: AWS Emails Forwarding 
+Author: Heng Hongsea
+Status: Active
+Create: 2020-05-14
+Update: NA
+Version: 0.1.0
+```
+# AWS Emails Forwarding 
 
 ### AWS CloudFormation Stack, provisions the following set of AWS Services and Code
 
