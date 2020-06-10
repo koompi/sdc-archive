@@ -14,7 +14,7 @@ Version: 0.0.1
 
 Go to this link for Installation Archlinux arm : 
 
-https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
+* https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
 
 ## lxqt on archlinux arm
 
@@ -49,7 +49,7 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
 
     ```
     $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-dbdev breeze-icons
-    $ sudo systemctl enable lightdm
+    $ sudo systemctl enable lightdm networkmanager networkmanager-ap    
     $ sudo reboot
     ```
     After reboot use will see Lightdm Display Manager use login.
