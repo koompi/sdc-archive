@@ -22,22 +22,22 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
 
     Use netctl service for connect to internet.
 
-    ```console
-    su       #and type password root user
-    wifi-menu     #you will see wifi list and select wifi that you want connect and type password
-    cd /etc/netctl        #go to netctl directory
-    netctl start <wifi_profile>       #use will see wifi profile when you connecting to wifi
-    ping fb.com       #test ping
+    ```
+    $  su       #and type password root user
+    $ wifi-menu     #you will see wifi list and select wifi that you want connect and type password
+    $ cd /etc/netctl        #go to netctl directory
+    $ netctl start <wifi_profile>       #use will see wifi profile when you connecting to wifi
+    $ ping fb.com       #test ping
     ```
 
 * **System update**
 
     Make sure you have already type both command : `pacman-key --init` and `pacman-key --populate archlinuxarm` 
 
-    ```console
-    pacman -Syu       #update all system
-    pacman -S sudo 
-    nano /etc/sudoers
+    ```
+    $ pacman -Syu       #update all system
+    $ pacman -S sudo 
+    $ nano /etc/sudoers
 
         #uncomment this line
         %wheel ALL=(ALL) ALL
@@ -47,9 +47,9 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
 
 * **Install Lxqt on archlinux arm**
 
-    ```console
-    sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-dbdev breeze-icons
-    sudo systemctl enable lightdm
-    sudo reboot
+    ```
+    $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-dbdev breeze-icons
+    $ sudo systemctl enable lightdm
+    $ sudo reboot
     ```
     After reboot use will see Lightdm Display Manager use login.
