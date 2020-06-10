@@ -7,6 +7,7 @@ Public Documentation
  Install and Configure Koompi os and solve common problem as well as user experience.
 
  * SA001 [Samba Config](/sa/samba/)
+ * SA002 [Installation Archlinux on Raspberry pi 4](/sa/install_Arch_rasp_pi_4_002.md)
 
  # DevOp
  Will above the foundation, Configure cloud computing, service etc.
