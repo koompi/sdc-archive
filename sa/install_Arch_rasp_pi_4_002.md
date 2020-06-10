@@ -18,7 +18,7 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
 
 ## lxqt on archlinux arm
 
-* Network
+* **Network**
 
     Use netctl service for connect to internet.
 
@@ -30,7 +30,7 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
     $ ping fb.com       #test ping
     ```
 
-* System update
+* **System update**
 
     Make sure you have already type both command : `pacman-key --init` and `pacman-key --populate archlinuxarm` 
 
@@ -45,7 +45,7 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
     ```
     And exit to use normal user.
 
-* Install Lxqt on archlinux arm
+* **Install Lxqt on archlinux arm**
 
     ```
     $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-dbdev breeze-icons
