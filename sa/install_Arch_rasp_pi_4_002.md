@@ -1,11 +1,11 @@
 ```
-SA: 002
-Title: Installation Archlinux on Raspberry pi 4
-Author: Heng Hongsea
-Status: Active
-Create: 2020-06-10
-Update: NA
-Version: 0.0.1
+SA:             002
+Title:          Installation Archlinux on Raspberry pi 4
+Author:      Heng Hongsea
+Status:       Active
+Create:       2020-06-10
+Update:      NA
+Version:     0.0.1
 ```
 
 # Installation Archlinux on Raspberry pi 4
