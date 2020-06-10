@@ -34,7 +34,7 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
 
     Make sure you have already type both command : `pacman-key --init` and `pacman-key --populate archlinuxarm` 
 
-    ```
+    ```console
     $ pacman -Syu       #update all system
     $ pacman -S sudo 
     $ nano /etc/sudoers
@@ -47,7 +47,7 @@ https://archlinuxarm.org/platforms/armv8/broadcom/raspberry-pi-4
 
 * **Install Lxqt on archlinux arm**
 
-    ```
+    ```console
     $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-dbdev breeze-icons
     $ sudo systemctl enable lightdm
     $ sudo reboot
