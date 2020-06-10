@@ -30,6 +30,39 @@ Go to this link for Installation Archlinux arm :
     $ ping fb.com       #test ping
     ```
 
+* **Timezones**
+
+    To check the current zone defined for the system: 
+    
+    ```
+    $ timedatectl status
+    ```
+
+    To list available zones: 
+
+    ```
+    $ timedatectl list-timezones
+    ```
+
+    To set your time zone: 
+
+    ```
+    $ timedatectl set-timezone Zone/SubZone
+    ```
+
+    Example: 
+
+    ```
+    $ timedatectl set-timezone Asia/Phnom_Penh
+    ```
+
+    This will create an /etc/localtime symlink that points to a zoneinfo file under /usr/share/zoneinfo/
+
+    ```
+    $ ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+    ```
+
+    And then you can reboot your system.
 * **System update**
 
     Make sure you have already type both command : `pacman-key --init` and `pacman-key --populate archlinuxarm` 
