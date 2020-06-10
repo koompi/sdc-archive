@@ -35,7 +35,7 @@ Go to this link for Installation Archlinux arm :
     To change the hardware clock time standard to localtime, use: 
 
     ```
-    $ timedatectl set-local-rtc 1
+    $    timedatectl set-local-rtc 1
     ```
 
     To check the current zone defined for the system: 
@@ -87,7 +87,7 @@ Go to this link for Installation Archlinux arm :
 * **Install Lxqt on archlinux arm**
 
     ```
-    $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-dbdev breeze-icons
+    $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-fbdev breeze-icons
     $ sudo systemctl enable lightdm networkmanager networkmanager-ap    
     $ sudo reboot
     ```
