@@ -32,6 +32,12 @@ Go to this link for Installation Archlinux arm :
 
 * **Timezones**
 
+    To change the hardware clock time standard to localtime, use: 
+
+    ```
+    $ timedatectl set-local-rtc 1
+    ```
+
     To check the current zone defined for the system: 
     
     ```
