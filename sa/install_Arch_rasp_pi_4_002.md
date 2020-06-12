@@ -87,7 +87,7 @@ Go to this link for Installation Archlinux arm :
 * **Install Lxqt on archlinux arm**
 
     ```
-    $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-fbdev breeze-icons
+    $ sudo  pacman -S xorg xorg-xinit mesa lightdm lightdm-gtk-greeter lxqt xf86-video-fbdev breeze-icons xf86-video-fbturbo-git
     $ sudo systemctl enable lightdm networkmanager networkmanager-ap    
     $ sudo reboot
     ```
