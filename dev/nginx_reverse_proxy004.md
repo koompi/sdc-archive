@@ -8,6 +8,6 @@ Update: NA
 version: 0.1.0
 ```
 
-# How to config nginx reverse_proxy
+# How to config nginx reverse proxy
 
 Comming soon...
