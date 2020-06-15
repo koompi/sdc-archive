@@ -15,7 +15,7 @@ Public Documentation
  * DEV001 [AWS Cloud and Service](/dev/aws_learning001.md)
  * DEV002 [How to fix Amazon EC2 instance when you accidentally block port 22](dev/fixing-aws-ec2-ufw-block-port-22.002.md)
  * DEV003 [AWS Emails Forwarding ](/dev/aws-forward-mail003.md)
- ) DEV004 [How to config reverse proxy](dev/nginx_reverse_proxy004.md)
+ * DEV004 [How to config reverse proxy](dev/nginx_reverse_proxy004.md)
 
  # Cybersecurity
 
