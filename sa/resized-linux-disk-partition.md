@@ -1,6 +1,6 @@
 ```
 SA      : 003
-Title   : Installation Archlinux on Raspberry pi 4
+Title   : Resize Linux Disk Partition
 Author  : Saing Sab
 Status  : Active
 Create  : 2020-07-22
