@@ -9,6 +9,7 @@ Document categorised into threes catagory below:
  * SA001 [Samba Config](/sa/samba/)
  * SA002 [Installation Archlinux on Raspberry pi 4](/sa/install_Arch_rasp_pi_4_002.md)
  * SA003 [Resize Linux Disk Partition](sa/resized-linux-disk-partition.md)
+ * SA004 [Fix Temporary Failure In Name Resolution](/sa/fix-temporary-failure-in-name-resolution.md)
 
  # DevOp
 Configure cloud computing, service etc.
