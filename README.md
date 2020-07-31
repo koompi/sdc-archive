@@ -18,6 +18,7 @@ Configure cloud computing, service etc.
  * DEV002 [How to fix Amazon EC2 instance when you accidentally block port 22](dev/fixing-aws-ec2-ufw-block-port-22.002.md)
  * DEV003 [AWS Emails Forwarding ](/dev/aws-forward-mail003.md)
  * DEV004 [How to config reverse proxy](dev/nginx_reverse_proxy004.md)
+ * DEV005 [How to deploy hugo with circleCI](dev/how-to-deploy-hugo-circleci.md)
 
  # Cybersecurity
 
