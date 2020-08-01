@@ -4,7 +4,7 @@ Title: How to config nginx reverse_proxy
 Author: Heng Hongsea
 Status: Active
 Create: 2020-06-15
-Update: NA
+Update: 2020-08-01
 version: 0.1.0
 ```
 
