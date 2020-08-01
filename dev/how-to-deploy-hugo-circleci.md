@@ -84,3 +84,38 @@ To run your very first build on CircleCI, complete the following steps:
 	![ci-save5](images/ci-save5.png)
 
 
+11. Configure nginx reverse proxy on server. [more detail](https://github.com/koompi/sdc-archive/blob/master/dev/nginx_reverse_proxy004.md)
+
+	```
+	$ cd /etc/nginx/sites-avaiable/
+	```
+	
+	Add config file
+	```
+	$ sudo nano www.hugotest.com.conf
+	
+	#Add this config to www.hugotest.com.conf
+	server {
+       listen 80;
+       listen [::]:80;
+
+       server_name www.hugotest.com;
+       root /path/project/hugotest.com/public/;
+       index index.html index.xml; # Hugo generates HTML
+ 
+       location / {
+               proxy_set_header Upgrade $http_upgrade;
+               proxy_set_header Connection 'upgrade';
+               proxy_set_header Host $host;
+               proxy_cache_bypass $http_upgrade;
+	       }
+	}
+	```
+
+	Like froom sites-avaiable to sites-enabled, and then restart service nginx.
+
+	```
+	$ sudo ln -s /etc/nginx/sites-avaiable/www.hugotest.com.conf /etc/nginx/sites-enabled/www.hugotest.com.conf
+	$ sudo nginx -t
+	$ sudo systemctl restart nginx
+	```
