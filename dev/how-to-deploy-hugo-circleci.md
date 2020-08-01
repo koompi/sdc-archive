@@ -22,12 +22,6 @@ CircleCI is a modern continuous integration and continuous delivery (CI/CD) plat
 ### Scenario
 We have a project website hugo push on github and want to auto build and auto deploy to server.  Now we will use CircleCI for do this.
 
-### Automated testing
-* CircleCI automatically runs your pipeline in a clean container or virtual machine, allowing you to test every commit.
-
-### Automated deployment
-* Passing pipelines are deployed to various environments so your product goes to market faster.
-
 ### Solution
 ## Sign Up and Try CircleCI
 To run your very first build on CircleCI, complete the following steps:
