@@ -20,7 +20,7 @@ CircleCI is a modern continuous integration and continuous delivery (CI/CD) plat
 **Continuous Integration:** If your tests pass, then you can deploy your code to development, staging, production, etc., automatically. The specific way that you do this depends on what type of infrastructure you are deploying to.
 
 ### Scenario
-We have a project website hugo push on github and want to auto build and auto deploy to server.  Now we will use CircleCI for do this.
+We have a project website hugo www.hugotest.com push on github and want to auto build and auto deploy to server.  Now we will use CircleCI for do this.
 
 ### Solution
 ## Sign Up and Try CircleCI
