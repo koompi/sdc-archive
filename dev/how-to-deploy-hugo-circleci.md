@@ -86,13 +86,10 @@ To run your very first build on CircleCI, complete the following steps:
 
 11. Configure nginx reverse proxy on server. [more detail](https://github.com/koompi/sdc-archive/blob/master/dev/nginx_reverse_proxy004.md)
 
-	```
-	$ cd /etc/nginx/sites-avaiable/
-	```
 	
-	Add config file
+	Create config file to /etc/nginx/sites-avaiable/www.hugotest.com.conf
+
 	```
-	$ sudo nano www.hugotest.com.conf
 	
 	#Add this config to www.hugotest.com.conf
 	server {
