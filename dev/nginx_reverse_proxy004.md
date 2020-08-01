@@ -90,7 +90,7 @@ Now we have example website run http://localhost:8080 and we want pass it ot dom
 
        server_name www.example.com;
        location / {
-	       proxy_pass http://localhost:8080;
+	           proxy_pass http://localhost:8080;
                proxy_set_header Upgrade $http_upgrade;
                proxy_set_header Connection 'upgrade';
                proxy_set_header Host $host;
