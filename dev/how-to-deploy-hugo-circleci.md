@@ -1,16 +1,26 @@
 
 ```
-DEV     : 005
-Title   : How to deploy hugo with circleCI
-Author  : Heng Hongsea
-Check by: Saing Sab
-Status  : Pending verify
-Create  : 2020-07-31
-Update  : 2020-07-31
-Version : 0.1
+DEV       : 005
+Title     : How to deploy hugo with circleCI
+Author    : Heng Hongsea
+checked by: Saing Sab
+Status    : Pending verify
+Create    : 2020-07-31
+Update    : 2020-07-31
+Version   : 0.1
 ```
 
 # **How to deploy hugo with CircleCI**
+
+### Intro
+CircleCI is a modern continuous integration and continuous delivery (CI/CD) platform. The CircleCI Enterprise solution is installable inside your private cloud or data center and is free to try for a limited time. CircleCI automates build, test, and deployment of software. CircleCI integrates with a VCS and automatically runs a series of steps every time that it detects a change to your repository. Here’s an explanation of what CI and CD are and how CircleCI fits into the process.
+
+**Continuous Integration:** Basically, Continuous Integration means multiple developers pushing small, frequent changes to a shared repository or ‘master’. They are integrating changes continuously, rather than periodically, and thus–ta da!–Continuous Integration. There’s a lot out there on [CI best practices](https://en.wikipedia.org/wiki/Continuous_integration#Best_practices) you can adhere to, but I’d say one of the most important is test all changes that you are making to your code base.
+
+**Continuous Integration:** If your tests pass, then you can deploy your code to development, staging, production, etc., automatically. The specific way that you do this depends on what type of infrastructure you are deploying to.
+
+### Scenario
+We have a project website hugo push on github and want to auto build and auto deploy to server.  Now we will use CircleCI for do this.
 
 ### Automated testing
 * CircleCI automatically runs your pipeline in a clean container or virtual machine, allowing you to test every commit.
@@ -18,6 +28,7 @@ Version : 0.1
 ### Automated deployment
 * Passing pipelines are deployed to various environments so your product goes to market faster.
 
+### Solution
 ## Sign Up and Try CircleCI
 To run your very first build on CircleCI, complete the following steps:
 
@@ -58,23 +69,24 @@ To run your very first build on CircleCI, complete the following steps:
 		- deploy: is [job name](https://circleci.com/docs/2.0/configuration-reference/#job_name)
 		- we use docker image for build project.
 		- Title of the step to be shown in the CircleCI UI.
-		- Command to run via the shell (we will build hugo site and deploy to server.).
+		- Command to run via the shell (First we will clone project on github and build with `hugo -D` base on site. We will create environment variables for deploy to server via rsync, it mean that after build hugo already we will rsync this project to server).
 		- workflows: Used for orchestrating all jobs. Each workflow consists of the workflow name as a key and a map as a value. A name should be unique within the current `config.yml`. The top-level keys for the Workflows configuration are `version` and `jobs`.
-6.  Use the Add Project page of the CircleCI app to start building your project code.
+6. You need add file .circleci/config.yml to project before Set Up Project.
+7. After you Sign Up with GitHub already you need use the Add Project page of the CircleCI app to start building your project code.
 ![ci-save](images/ci-save.png)
-7. You need add file .circleci/config.yml to project.
-8. Once on the Project page, find the project you are using, and click **Use Existing Config**
+8. Once on the Project page, find the project you are using, and click **Use Existing Config** and then **Start Building**.
 ![ci-save1](images/ci-save1.png)
 9. Add SSH Keys and Environment Variables for deploy to server.
-	Click on Pipelines -> deploy -> Project Settings
+	Click on Pipelines -> deploy -> Project Settings.
 	![ci-save3](images/ci-save3.png)
 	![ci-save2](images/ci-save2.png)
 	* Add SSH Keys
-		- Click on `Add SSH key` for add private key.
+		- Click on `Add SSH key` for add private key server.
 	* Add Environment Variables
-		- Click on `Variable` for add nvironment variables
+		- Click on `Variable` for add evironment variables (for rsync this website to server.
 10. And then return to Pipelines
 	Click on `Pipelines -> deploy -> Return Workflow from Start` for redeploy.
 	![ci-save4](images/ci-save4.png)
+	![ci-save5](images/ci-save5.png)
 
 
