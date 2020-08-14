@@ -1,5 +1,5 @@
 # introduction
-Ssystem Administrator DevOp and Cybersecrity (SDC) archive is the collection containing records, documents, or other materials for learning ans solving issue while running and configure Koompi infrastructure.
+System Administrator DevOp and Cybersecrity (SDC) archive is the collection containing records, documents, or other materials for learning ans solving issue while running and configure Koompi infrastructure.
 
 Document categorised into threes catagory below:
 # System Administrator
