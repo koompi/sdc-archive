@@ -10,7 +10,7 @@ Document categorised into threes catagory below:
  * SA002 [Installation Archlinux on Raspberry pi 4](/sa/install_Arch_rasp_pi_4_002.md)
  * SA003 [Resize Linux Disk Partition](sa/resized-linux-disk-partition.md)
  * SA004 [Fix Temporary Failure In Name Resolution](/sa/fix-temporary-failure-in-name-resolution.md)
- * SA005 [How to run qemu on KOOMPI OS with bridge interface](/sa/qemu-on-koompi-os-with-bridge_005.md)
+ * SA005 [How to run qemu on KOOMPI OS with tap interface](/sa/qemu-on-koompi-os-with-bridge_005.md)
 
  # DevOp
 Configure cloud computing, service etc.

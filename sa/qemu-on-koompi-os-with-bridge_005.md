@@ -1,6 +1,6 @@
 ```
 SA: 005
-Title: How to run Qemu on KOOMPI OS with bridge interface
+Title: How to run Qemu on KOOMPI OS with tap interface
 Author: Heng Hongsea
 Status: Active
 Create: 2020-08-17
@@ -8,7 +8,7 @@ Update: 2020-08-17
 Version: 0.1
 ```
 
-# How to run Qemu on KOOMPI OS with bridge interface
+# How to run Qemu on KOOMPI OS with tap interface
 
 [QEMU](https://www.qemu.org/) is a virtualization technology emulator that allows you to run operating systems and Linux distributions easily on your current system without the need to install them or burn their ISO files. It is like VMware or VirtualBox. You can use it at anytime to emulate running any operating system you want on a lot of devices and architecture.
 
@@ -39,7 +39,7 @@ $ qemu-img create -f qcow2 Qemu1.img 20G
 $ qemu-img create -f qcow2 Qemu2.img 20G
 ```
 
-***Note that a new file called “testing-image.img” is now created at your home folder (or the place where you run the terminal).***
+***Note that a new file called “Qemu.img” is now created at your home folder (or the place where you run the terminal).***
 
 ### **2. Boot from ISO file**
 
@@ -221,4 +221,30 @@ Allows for proper packet routing (be sure to replace eth1 with an appropriate ne
 $ sudo iptables -t nat -A POSTROUTING -o wlp1s0 -j MASQUERADE -w
 $ sudo iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT -w
 $ sduo iptables -A FORWARD -i br0 -o wlp1s0 -j ACCEPT -w
+```
+
+## Start Run Qemu with tap interface
+
+I. For Qemu0
+
+```
+$ sudo qemu-system-x86_64 -enable-kvm -m 1024 -device qemu-xhci \
+-boot d -smp 1 -net nic,macaddr=52:54:00:12:34:56 -net tap,ifname=tap0,script=no,downscript=no \
+-hda Qemu0.img
+```
+
+II. For Qemu1
+
+```
+$ sudo qemu-system-x86_64 -enable-kvm -m 1024 -device qemu-xhci \
+-boot d -smp 1 -net nic,macaddr=00:00:00:11:11:11 -net tap,ifname=tap1,script=no,downscript=no \
+-hda Qemu1.img
+```
+
+III. For Qemu2
+
+```
+$ sudo qemu-system-x86_64 -enable-kvm -m 1024 -device qemu-xhci \
+-boot d -smp 1 -net nic,macaddr=00:00:00:22:22:22 -net tap,ifname=tap2,script=no,downscript=no \
+-hda Qemu2.img
 ```
