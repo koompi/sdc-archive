@@ -10,6 +10,7 @@ Document categorised into threes catagory below:
  * SA002 [Installation Archlinux on Raspberry pi 4](/sa/install_Arch_rasp_pi_4_002.md)
  * SA003 [Resize Linux Disk Partition](sa/resized-linux-disk-partition.md)
  * SA004 [Fix Temporary Failure In Name Resolution](/sa/fix-temporary-failure-in-name-resolution.md)
+ * SA005 [How to run qemu on KOOMPI OS with bridge interface](/sa/qemu-on-koompi-os-with-bridge_005.md)
 
  # DevOp
 Configure cloud computing, service etc.
@@ -19,6 +20,7 @@ Configure cloud computing, service etc.
  * DEV003 [AWS Emails Forwarding ](/dev/aws-forward-mail003.md)
  * DEV004 [How to config reverse proxy](dev/nginx_reverse_proxy004.md)
  * DEV005 [How to deploy hugo with circleCI](dev/how-to-deploy-hugo-circleci.md)
+ * DEV006 [How to merge a contributing code](dev/how-to-merge-a-contributing-code.md)
 
  # Cybersecurity
 
