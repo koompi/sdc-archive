@@ -89,7 +89,7 @@ Now, if you want to just boot from the image file without the ISO file (for exam
 sudo qemu-system-x86_64 -m 1024 -boot d -enable-kvm -smp 3 -net nic -net user -hda Qemu0.img
 ```
 
-## Bridge Interface
+## Create bridge and tap Interface
 
 1. Create network bridge
 
@@ -215,7 +215,18 @@ sudo qemu-system-x86_64 -m 1024 -boot d -enable-kvm -smp 3 -net nic -net user -h
 
 ## Packet forwarding and NAT
 
-Allows for proper packet routing (be sure to replace eth1 with an appropriate network interface name). You need to know which one lan interface and wan interface.for example: wlp1s0 is wan interface for route to internet and br0 is lan interface.
+Add this configure in this path: `/etc/sysctl.d/10-ip_forward.conf`
+
+```
+net.ipv4.ip_forward=1
+```
+And then run:
+
+```
+sudo sysctl -p /etc/sysctl.d/10-ip_forward.conf
+```
+
+Allows for proper packet routing (be sure to replace eth1 with an appropriate network interface name). You need to know which one lan interface and wan interface.for example: wlp1s0 is wan interface for route to internet and br0 is lan interface. You should run this:
 
 ```
 $ sudo iptables -t nat -A POSTROUTING -o wlp1s0 -j MASQUERADE -w
@@ -248,3 +259,7 @@ $ sudo qemu-system-x86_64 -enable-kvm -m 1024 -device qemu-xhci \
 -boot d -smp 1 -net nic,macaddr=00:00:00:22:22:22 -net tap,ifname=tap2,script=no,downscript=no \
 -hda Qemu2.img
 ```
+
+Reference:
+1. https://fosspost.org/use-qemu-test-operating-systems-distributions/
+2. https://wiki.gentoo.org/wiki/QEMU/Options
