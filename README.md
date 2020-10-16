@@ -26,4 +26,5 @@ Configure cloud computing, service etc.
  # Cybersecurity
 
 Koompi Vulnerability Research and Advisories
- * KVRA001 [Penetration Testing Course](kvra/cyber-learing001.md)
+ * KVRA001 [Penetration Testing Course](/kvra/cyber-learning001.md)
+ * KVRA002 [Hacker101](/kvra/hacker101.md)
