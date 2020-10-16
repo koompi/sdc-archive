@@ -10,7 +10,7 @@ Version: 0.0.1
 
 # **AWS Cloud and Service**  
 
-**-   What is Clund ?**    
+**-   What is Cloud ?**    
 **-   What is AWS ?**       
 **-   Different Domains in AWS**        
 **-   AWS Services**    
