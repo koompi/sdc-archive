@@ -12,6 +12,7 @@ Document categorised into threes catagory below:
  * SA004 [Fix Temporary Failure In Name Resolution](/sa/fix-temporary-failure-in-name-resolution.md)
  * SA005 [How to run qemu on KOOMPI OS with tap interface](/sa/qemu-on-koompi-os-with-bridge_005.md)
  * SA006 [SSH Security to secure your systems](/sa/ssh_security_to_secure_your_systems.md)
+ * SA007 [How to Connect iPhone to KOOMPI OS](/sa/how-to-connect-iphone-device.md)
 
  # DevOp
 Configure cloud computing, service etc.
