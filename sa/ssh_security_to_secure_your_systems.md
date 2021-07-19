@@ -14,7 +14,7 @@ I have two method for do this:
 
 ### Method 1:  Run Script Automatically
 
-suppose a user will logon to my computer from another system(connected via lan) using ssh connection. At that time, A script(python or shell) should be run automatically in my system to perform some validation?
+Suppose a user will logon to my computer from another system(connected via lan) using ssh connection. At that time, A script(python or shell) should be run automatically in my system to perform some validation?
 
 You can do so by adding the following parameter to your config file (/etc/ssh/sshd_config).
 
